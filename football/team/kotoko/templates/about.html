@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Details | {{ object.first_name }} {{ object.last_name }} {% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1 id="name">{{ object.first_name }} {{ object.last_name }}</h1>
+        <p>Address: {{ object.address }}</p>
+        <p>Email: {{ object.email }}</p>
+        <p>Member Since: {{ object.member_since }}</p>
+    </div>
+    {% endblock %}
+</body>
+</html>

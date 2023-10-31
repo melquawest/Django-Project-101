@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="/home">Home</a>
+        <a href="/players">Players</a>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class="buttom-section">
+        <div class="icons">
+            <p id="get-in-touch">Get in touch</p>
+            <div class="socials">
+                <a href="#"><img src="{% static 'facebook.svg' %}" alt="facebook Icon" class="icon"></a>
+                <a href="#"><img src="{% static 'instagram.svg' %}" alt="Instagram Icon" class="icon"></a>
+                <a href="#"><img src="{% static 'x.svg' %}" alt="x icon" class="icon"></a>
+                <a href="#"><img src="{% static 'whatsapp.svg' %}" alt="whatsapp icon" class="icon"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

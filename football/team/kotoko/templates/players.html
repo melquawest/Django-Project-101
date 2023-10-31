@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} List of all memebers {% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <main class="container">
+
+        <h1 class="player">All Players</h1> 
+        <ul>
+            {% for player in object %}
+            <li><a href="/about/{{player.id}}">{{ player.first_name }} {{ player.last_name }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </main>
+    {% endblock content %}
+</body>
+</html>
