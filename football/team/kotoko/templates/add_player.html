@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+
+{% block title %}
+Add New Player
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" id="add-player">Add Player</button>
+</form>
+{% endblock %}
