@@ -6,6 +6,7 @@ class Staff(models.Model):
     age = models.IntegerField()
     email = models.EmailField(max_length=50)
     role = models.CharField(max_length=100)
+    nationality = models.CharField(default='Ghanaian', max_length=100)
     
     def __str__(self):
         return f'{self.name}'

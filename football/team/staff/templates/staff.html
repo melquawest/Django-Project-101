@@ -1,0 +1,16 @@
+{% extends "master-staff.html" %}
+
+{% block title %}
+List | Staff
+{% endblock %}
+
+{% block content %}
+<main class="container">
+    <h1 class="player">Staff Members</h1>
+    <ul>
+        {% for member in staff %}
+        <li>{{ member.name }}</li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

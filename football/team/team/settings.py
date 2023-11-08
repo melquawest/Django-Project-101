@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kotoko',
     'staff',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
